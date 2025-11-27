@@ -1,0 +1,358 @@
+/* ================ BASE STYLES ================ */
+:root {
+  /* BACKGROUND */
+  --color-BLACK: rgb(0, 0, 0);
+
+  /* Nintendo Switch (RED) */
+  --color-switch: rgb(255, 45, 45);
+  --color-switch-dark: rgb(200, 30, 30);
+
+  /* PlayStation (BLUE) */
+  --color-playstation: rgb(0, 120, 255);
+  --color-playstation-dark: rgb(15, 65, 140);
+
+  /* Xbox (NEON-GREEN) */
+  --color-xbox: rgb(0, 255, 100);
+  --color-xbox-dark: rgb(0, 150, 70);
+
+  /* TEXT*/
+  --color-text: rgb(255, 255, 255);
+  --color-text-secondary: rgb(180, 180, 180);
+
+  /* TEXT-PURPLE*/
+  --color-purple: rgb(120, 60, 255);
+  --color-purple-dark: rgb(100, 30, 200);
+
+  /*FONTS */
+  --font-body: 'Rajdhani', sans-serif;
+  --font-title: 'Orbitron', sans-serif;
+}
+
+/* ================ CARD DISPLAY CONTAINER ================ */
+.card-display-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-BLACK);
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-display-container h1 {
+  font-family: var(--font-title);
+  color: var(--color-purple);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(120, 60, 255, 0.7);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.card-display-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-purple), transparent);
+}
+
+/* ================ GAMER CARD STYLES ================ */
+#gameCardDisplay {
+  max-width: 600px;
+  width: 100%;
+  margin: 1rem auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--color-purple);
+}
+
+.gamer-card {
+  position: relative;
+  height: 350px;
+  display: flex;
+  color: var(--color-text);
+}
+
+/* ===== CONSOLE BADGE ===== */
+.console-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  animation: pulse 2s infinite alternate;
+}
+
+.console-badge.playstation {
+  background: linear-gradient(135deg, var(--color-playstation), var(--color-playstation-dark));
+  color: white;
+}
+
+.console-badge.xbox {
+  background: linear-gradient(135deg, var(--color-xbox), var(--color-xbox-dark));
+  color: black;
+}
+
+.console-badge.switch {
+  background: linear-gradient(135deg, var(--color-switch), var(--color-switch-dark));
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, 
+    rgba(0, 0, 0, 0.8) 0%, 
+    rgba(0, 0, 0, 0.6) 50%, 
+    rgba(0, 0, 0, 0.3) 100%);
+}
+
+.character-image-container {
+  position: relative;
+  align-self: center;
+  margin-right: 1.5rem;
+}
+
+.character-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-purple);
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(120, 60, 255, 0.5);
+}
+
+.character-image-container::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  border: 2px dashed var(--color-purple);
+  opacity: 0.5;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gamer-info {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gamer-info h2 {
+  font-family: var(--font-title);
+  margin: 0 0 0.5rem 0;
+  color: var(--color-purple);
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(120, 60, 255, 0.7);
+  letter-spacing: 1px;
+}
+
+.gamer-info p {
+  font-family: var(--font-body);
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.gamer-info p strong {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.gamer-text {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(120, 60, 255, 0.1);
+  border-radius: 5px;
+  font-style: italic;
+  border-left: 3px solid var(--color-purple);
+  position: relative;
+}
+
+.gamer-text::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-size: 2rem;
+  color: rgba(120, 60, 255, 0.3);
+}
+
+.gamer-text::after {
+  content: '"';
+  position: absolute;
+  bottom: -20px;
+  right: 5px;
+  font-size: 2rem;
+  color: rgba(120, 60, 255, 0.3);
+}
+
+/* ================ BUTTONS & ACTIONS ================ */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.download-btn, 
+.create-new-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, 
+    var(--color-playstation), 
+    var(--color-playstation-dark));
+  color: white;
+}
+
+.create-new-btn {
+  background: linear-gradient(135deg, 
+    var(--color-xbox), 
+    var(--color-xbox-dark));
+  color: black;
+}
+
+.download-btn:hover, 
+.create-new-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 120, 255, 0.4);
+}
+
+.create-new-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 255, 100, 0.4);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+/* ================ RESPONSIVE DESIGN ================ */
+@media (max-width: 768px) {
+  .card-display-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .console-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.7rem;
+  }
+  
+  .gamer-card {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem 0;
+  }
+  
+  .character-image-container {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .gamer-info {
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .download-btn, 
+  .create-new-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-display-container h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .character-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .gamer-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .gamer-info p {
+    font-size: 1rem;
+  }
+  
+  .console-badge {
+    top: 10px;
+    right: 10px;
+  }
+}

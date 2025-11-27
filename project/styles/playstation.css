@@ -1,0 +1,670 @@
+/*USING THE COLOR SCHEMA AND TYPOGRAHY*/
+:root {
+  /* BACKGROUND */
+  --color-BLACK: rgb(0, 0, 0);
+
+  /* Nintendo Switch (RED) */
+  --color-switch: rgb(255, 45, 45);
+  --color-switch-dark: rgb(200, 30, 30);
+
+  /* PlayStation (BLUE) */
+  --color-playstation: rgb(0, 120, 255);
+  --color-playstation-dark: rgb(15, 65, 140);
+
+  /* Xbox (NEON-GREEN) */
+  --color-xbox: rgb(0, 255, 100);
+  --color-xbox-dark: rgb(0, 150, 70);
+
+  /* TEXT*/
+  --color-text: rgb(255, 255, 255);
+  --color-text-secondary: rgb(180, 180, 180);
+
+  /* TEXT-PURPLE*/
+  --color-purple: rgb(120, 60, 255);
+
+  /*FONTS */
+  --font-body: 'Rajdhani', sans-serif;
+  --font-title: 'Orbitron', sans-serif;
+
+  /* https://coolors.co/000000-ff2d2d-0078ff-00ff64-ffffff-783cff */
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-BLACK);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--color-BLACK);
+  border-bottom: 2px solid var(--color-playstation);
+  margin-bottom: 2rem;
+}
+
+
+header h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--color-playstation);
+}
+
+#MAIN_MENU {
+  display: flex;
+  gap: 2rem;
+}
+
+#h_menu {
+  display: none;
+  cursor: pointer;
+}
+
+#HOME,
+#SWITCH,
+#PS,
+#XBOX {
+  color: var(--color-text);
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+#HOME:hover {
+  color: var(--color-purple);
+}
+
+#SWITCH:hover {
+  color: var(--color-switch);
+}
+
+#PS:hover {
+  color: var(--color-playstation);
+}
+
+#XBOX:hover {
+  color: var(--color-xbox);
+}
+
+main h1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--color-playstation);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -2rem;
+}
+
+/*BOX-SIZING GLOBAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* MAIN (CONSOLES / GAMES) */
+.main-sections {
+  display: flex;
+  flex-wrap: nowrap;
+  /* stay in the same height*/
+  width: 100%;
+  max-width: 100vw;
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: -4rem;
+}
+
+/*CONSOLES SECTION*/
+.consoles-section {
+  width: calc(50vw - 2rem);
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* BIG BACKGROUND RED */
+.consoles-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-playstation);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: var(--color-playstation-dark) 0px 0px 80px;
+}
+
+.consoles-wrapper h2 {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.consoles-content {
+  width: 100%;
+  display: flex;
+  position: relative;
+  min-height: 300px;
+}
+
+/* Image */
+.consoles-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+/*GRID INSIDE OF THE IMAGE */
+.consoles-grid {
+  position: absolute;
+  top: 60px;
+  left: 2rem;
+  /* STAY IN THE BACKGROUND COLOR */
+  right: 2rem;
+  /* STAY IN THE BACKGROUND COLOR */
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  box-sizing: border-box;
+}
+
+/* INFORMATION */
+.PLAYSTATION_5_SLIM_DISC,
+.PLAYSTATION_5_PRO {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  height: 335px;
+}
+
+/* hover */
+.consoles-section:hover .consoles-img {
+  opacity: 0;
+}
+
+.consoles-section:hover .consoles-grid {
+  opacity: 1;
+}
+
+
+/* SECTION GAMES */
+.games-section {
+  width: calc(50vw - 2rem);
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.games-wrapper {
+  width: 100%;
+  background-color: var(--color-playstation);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: var(--color-playstation-dark) 0px 0px 50px;
+}
+
+.games-wrapper h2 {
+  font-family: var(--font-title);
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* IMAGE */
+.games-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+/* GAMES LIST */
+.games-list {
+  position: absolute;
+  top: 80px;
+  left: 1rem;
+  /* STAY IN THE BACKGROUND COLOR */
+  right: 1rem;
+  /* STAY IN THE BACKGROUND COLOR */
+  height: 300px;
+  padding: 2rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.games-list p {
+  margin: 0;
+}
+
+/*HOVER */
+.games-section:hover .games-img {
+  opacity: 0;
+}
+
+.games-section:hover .games-list {
+  opacity: 1;
+}
+
+/* Footer */
+footer p {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+footer {
+  border-top: 2px solid var(--color-playstation);
+}
+
+.p_2 {
+  color: var(--color-playstation);
+}
+
+/*CARD CONTAINER*/
+.container {
+  display: flex;
+  gap: 10px;
+  margin: 50px auto;
+  width: 90%;
+  height: 340px;
+}
+
+.card {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: flex-grow 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.card:hover {
+  flex-grow: 3;
+}
+
+.card img.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.card:hover img.background {
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.card-content .title {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--color-text);
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+/*HIDE THE IMG IN THE LAPTOP VIEW*/
+.mobile-extra-img {
+  display: none;
+}
+
+/* Diálogo de juego - Versión mejorada con centrado completo */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.game-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 900px;
+    height: 80vh;
+    max-height: 700px;
+    z-index: 1001;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 120, 255, 0.5);
+    border: 2px solid var(--color-playstation);
+}
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.dialog-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+.dialog-content h2 {
+    color: var(--color-playstation);
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid var(--color-playstation);
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.game-info {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+.game-info p {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #ff9900;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.buy-button:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+}
+
+.close-dialog {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: var(--color-playstation-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.close-dialog:hover {
+    background: var(--color-playstation);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-dialog {
+        width: 95%;
+        height: 90vh;
+    }
+    
+    .dialog-content {
+        padding: 1.5rem;
+    }
+    
+    .dialog-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .game-info {
+        padding: 1.5rem;
+        width: 90%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .game-info p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .buy-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Media query MOBILES (760px) */
+@media screen and (max-width: 760px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  #MAIN_MENU a:not(#h_menu) {
+    display: none;
+  }
+
+  #h_menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    text-decoration: none;
+  }
+
+  #MAIN_MENU.menu-open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    background: #44444492;
+    padding: 1rem 0;
+  }
+
+  #MAIN_MENU.menu-open a:not(#h_menu) {
+    display: block;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+
+  /* HAMBURGUER MENU */
+  #h_menu::before {
+    content: "🎮";
+  }
+
+  #MAIN_MENU.menu-open #h_menu::before {
+    content: "🕹️";
+  }
+
+  .card-content .title {
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--color-text);
+    text-shadow: 1px 1px 4px black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  main h1 {
+    margin-bottom: 1rem;
+  }
+
+  /* DISPLAY OF CONSOLES AND GAMES */
+  .main-sections {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .consoles-section,
+  .games-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* TITLES LOWER */
+  .consoles-wrapper h2,
+  .games-wrapper h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .consoles-wrapper,
+  .games-wrapper {
+    padding: 1.5rem;
+  }
+
+  .consoles-wrapper {
+    min-height: 580px;
+    padding-bottom: 1rem;
+  }
+
+  .consoles-img {
+    height: 330px;
+    margin-bottom: 2rem;
+  }
+
+  .games-img {
+    height: 250px;
+  }
+
+  /* EXTRA IMAGE MOBILE */
+  .mobile-extra-img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /*CARD INFORMATION */
+  .PLAYSTATION_5_SLIM_DISC,
+  .PLAYSTATION_5_PRO {
+    height: 100%;
+    min-height: 160px;
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+
+  /*GAME LIST */
+  .games-list {
+    left: 0.5rem;
+    right: 0.5rem;
+    height: 250px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  /* HOVER */
+  .consoles-section:hover .consoles-img,
+  .consoles-section:hover .mobile-extra-img {
+    opacity: 0;
+  }
+
+  .consoles-section:hover .consoles-grid {
+    opacity: 1;
+  }
+
+  /* ONLY ONE COLUMN IN MOBILE*/
+  .consoles-grid {
+    grid-template-columns: 1fr;
+    /* Solo una columna */
+  }
+
+}

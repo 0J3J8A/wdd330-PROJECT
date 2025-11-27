@@ -1,0 +1,441 @@
+/* ================ GAMER CARD FORM STYLES ================ */
+:root {
+  /* BACKGROUND */
+  --color-BLACK: rgb(0, 0, 0);
+
+  /* Nintendo Switch (RED) */
+  --color-switch: rgb(255, 45, 45);
+  --color-switch-dark: rgb(200, 30, 30);
+
+  /* PlayStation (BLUE) */
+  --color-playstation: rgb(0, 120, 255);
+  --color-playstation-dark: rgb(15, 65, 140);
+
+  /* Xbox (NEON-GREEN) */
+  --color-xbox: rgb(0, 255, 100);
+  --color-xbox-dark: rgb(0, 150, 70);
+
+  /* TEXT*/
+  --color-text: rgb(255, 255, 255);
+  --color-text-secondary: rgb(180, 180, 180);
+
+  /* TEXT-PURPLE*/
+  --color-purple: rgb(120, 60, 255);
+  --color-purple-dark: rgb(100, 30, 200);
+
+  /*FONTS */
+  --font-body: 'Rajdhani', sans-serif;
+  --font-title: 'Orbitron', sans-serif;
+}
+
+/* ================ FORM CONTAINER ================ */
+.gamecard-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 2px solid var(--color-purple);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(120, 60, 255, 0.3);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  position: relative;
+  overflow: hidden;
+}
+
+.gamecard-form::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, 
+    rgba(120, 60, 255, 0.1) 0%, 
+    rgba(0, 0, 0, 0) 70%);
+  z-index: -1;
+  animation: pulse 15s infinite linear;
+}
+
+@keyframes pulse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ================ FORM TITLE ================ */
+.gamecard-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-title);
+  color: var(--color-purple);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(120, 60, 255, 0.7);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.gamecard-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--color-purple), 
+    transparent);
+}
+
+/* ================ FORM LAYOUT ================ */
+#gameCardForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 0.5rem; 
+}
+
+#gameCardForm .form-group {
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+/* ================ FORM LABELS ================ */
+#gameCardForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding-left: 0.3rem; 
+}
+
+/* ================ FORM INPUTS ================ */
+#gameCardForm input,
+#gameCardForm select,
+#gameCardForm textarea {
+  width: calc(100% - 1.6rem); 
+  padding: 0.8rem;
+  border: 1px solid var(--color-purple);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 0 0.3rem; 
+}
+
+#gameCardForm input:focus,
+#gameCardForm select:focus,
+#gameCardForm textarea:focus {
+  outline: none;
+  border-color: var(--color-purple-dark);
+  box-shadow: 0 0 10px rgba(120, 60, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#gameCardForm textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: calc(100% - 1.6rem); 
+}
+
+/* ================ FORM BUTTON ================ */
+#gameCardForm button {
+  grid-column: span 2;
+  padding: 1rem;
+  background: linear-gradient(135deg, 
+    var(--color-purple), 
+    var(--color-purple-dark));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin: 1rem 0.3rem 0; 
+  width: calc(100% - 0.6rem); 
+}
+
+#gameCardForm button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#gameCardForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(120, 60, 255, 0.4);
+}
+
+#gameCardForm button:hover::before {
+  left: 100%;
+}
+
+/* ================ CARD DISPLAY STYLES ================ */
+.card-display-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-BLACK);
+}
+
+.card-display-container h1 {
+  font-family: var(--font-title);
+  color: var(--color-purple);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(120, 60, 255, 0.7);
+}
+
+#gameCardDisplay {
+  max-width: 600px;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  border: 3px solid var(--color-purple);
+}
+
+.gamer-card {
+  position: relative;
+  height: 350px;
+  display: flex;
+  color: var(--color-text);
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(90deg, 
+    rgba(0, 0, 0, 0.8) 0%, 
+    rgba(0, 0, 0, 0.6) 50%, 
+    rgba(0, 0, 0, 0.3) 100%);
+}
+
+.character-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--color-purple);
+  object-fit: cover;
+  margin-right: 1.5rem;
+  align-self: center;
+  box-shadow: 0 0 20px rgba(120, 60, 255, 0.5);
+}
+
+.gamer-info {
+  flex: 1;
+  text-align: left;
+}
+
+.gamer-info h2 {
+  font-family: var(--font-title);
+  margin-bottom: 0.5rem;
+  color: var(--color-purple);
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(120, 60, 255, 0.7);
+}
+
+.gamer-info p {
+  font-family: var(--font-body);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.gamer-info p strong {
+  color: var(--color-text-secondary);
+}
+
+.gamer-text {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(120, 60, 255, 0.1);
+  border-radius: 5px;
+  font-style: italic;
+  border-left: 3px solid var(--color-purple);
+}
+
+/* ================ BUTTONS ================ */
+.download-btn, 
+.create-new-btn {
+  padding: 0.8rem 2rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, 
+    var(--color-playstation), 
+    var(--color-playstation-dark));
+  color: white;
+}
+
+.create-new-btn {
+  background: linear-gradient(135deg, 
+    var(--color-xbox), 
+    var(--color-xbox-dark));
+  color: black;
+}
+
+.download-btn:hover, 
+.create-new-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 120, 255, 0.4);
+}
+
+.create-new-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 255, 100, 0.4);
+}
+
+/* ================ RESPONSIVE DESIGN ================ */
+@media (max-width: 768px) {
+  #gameCardForm {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.5rem; /* Mantener padding interno */
+  }
+  
+  #gameCardForm button {
+    grid-column: span 1;
+    margin: 1rem 0.3rem 0;
+    width: calc(100% - 0.6rem);
+  }
+  
+  .gamer-card {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .character-image {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .gamer-info {
+    text-align: center;
+  }
+  
+  .card-display-container h1 {
+    font-size: 2rem;
+  }
+  
+  /* Ajustes para el contenedor del formulario */
+  .gamecard-form {
+    margin: 2rem 1rem;
+    padding: 1.5rem 1rem; /* Más padding horizontal */
+    width: calc(100% - 2rem);
+    box-sizing: border-box;
+  }
+  
+  /* Ajustes específicos para inputs en tablet */
+  #gameCardForm input,
+  #gameCardForm select,
+  #gameCardForm textarea {
+    width: calc(100% - 1.2rem);
+    margin: 0 0.2rem;
+  }
+  
+  #gameCardForm textarea {
+    width: calc(100% - 1.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes más específicos para móviles pequeños */
+  .gamecard-form {
+    margin: 1.5rem 0.8rem;
+    padding: 1.2rem 0.8rem;
+    width: calc(100% - 1.6rem);
+  }
+  
+  .card-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .character-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ajustes de tamaño de fuente */
+  .gamecard-form h2 {
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+  }
+  
+  #gameCardForm label {
+    font-size: 1rem;
+    padding-left: 0.2rem;
+  }
+  
+  #gameCardForm input,
+  #gameCardForm select,
+  #gameCardForm textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    width: calc(100% - 1rem);
+    margin: 0 0.1rem;
+  }
+  
+  #gameCardForm textarea {
+    width: calc(100% - 1rem);
+  }
+  
+  #gameCardForm button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 1rem 0.1rem 0;
+    width: calc(100% - 0.2rem);
+  }
+}

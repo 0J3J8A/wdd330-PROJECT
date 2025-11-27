@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gamer ID Card | GAMING HUB</title>
+    <meta name="author" content="Juan Jose Aguirre Marin">
+    <meta name="description" content="Your personalized gaming ID card">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/gamecard-display.css">
+    <script src="scripts/gamecard-display.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <!--ADDING A FAVICON-->
+    <link rel="icon" href="images/favicon.ico">
+    
+</head>
+
+<body>
+    <header>
+        <h1>GAMING HUB</h1>
+        <nav id="MAIN_MENU">
+            <a id="h_menu" href="#"></a>
+            <a href="siteplan.html" id="HOME">HOME</a>
+            <a href="switch.html" id="SWITCH">SWITCH</a>
+            <a href="playstation.html" id="PS">PLAY STATION</a>
+            <a href="xbox.html" id="XBOX">XBOX</a>
+        </nav>
+    </header>
+
+    <main class="card-display-container">
+        <h1>YOUR OFFICIAL GAMER ID</h1>
+
+        <div id="gameCardDisplay">
+            <div class="gamer-card">
+                <img class="card-background" src="" alt="Game background">
+                <div class="card-content">
+                    <div class="character-image-container">
+                        <img class="character-image" src="" alt="Character">
+                    </div>
+                    <div class="gamer-info">
+                        <h2 id="gamerName"></h2>
+                        <p><strong>Age:</strong> <span id="gamerAge"></span></p>
+                        <p><strong>From:</strong> <span id="gamerCountry"></span></p>
+                        <p><strong>Platform:</strong> <span id="gamerConsole"></span></p>
+                        <p><strong>Favorite Game:</strong> <span id="gamerGame"></span></p>
+                        <p><strong>Main Character:</strong> <span id="gamerCharacter"></span></p>
+                        <div class="gamer-text" id="gamerText"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-actions">
+            <button id="downloadCard" class="download-btn">
+                <span class="btn-icon">↓</span> DOWNLOAD CARD
+            </button>
+            <button id="createNewCard" class="create-new-btn">
+                <span class="btn-icon">+</span> CREATE NEW CARD
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span>- Juan Jose Aguirre Marin - Colombia</p>
+        <p class="p_2">Last Modification: <span id="lastmodification"></span></p>
+    </footer>
+</body>
+
+</html>

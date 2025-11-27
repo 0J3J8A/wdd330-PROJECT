@@ -1,0 +1,376 @@
+{
+  "games": [
+    {
+      "title": "GOD OF WAR RAGNAROK",
+      "developer": "Santa Monica Studio",
+      "year": 2022,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/God-War-Ragnarök-SONY-PLAYSTATION-5/dp/B0B6CMDSMW?crid=51M52TD6XVZ4&dib=eyJ2IjoiMSJ9.lComZkqlIAvyPWyxi5DfuBR_2o44fZvGG119wBH19jvjp4VEwJOA7pBbNYQ9VnRr4ZFaJ6c2BtKofaGgY_NUhfE8gHlkC36so_tg5mt4hbaDBPYo6RggIOzSzhv-uKhRBH88S-If4k322coiDHduYmvJ0HJeCAwnujZ77v7du0QaG3EuDHnJVcLVZPbqJVXT-JrH9M8SBrRm6dAekrWFaet-JBnAQtu5g1VLkzkID4U.lLcWJ-qKEmQaylBqFtqTWJ4C0fRYB0dk6P0gLFrZClI&dib_tag=se&keywords=god+of+war+ragnarok+ps5&qid=1764250560&sprefix=god+of+war+ragna%2Caps%2C182&sr=8-1",
+      "image": "images/plays/GOW_R.jpg",
+      "backgroundVideo": "images/plays/b_videos/GOW_R_BV.mp4",
+      "characters": [
+        {
+          "name": "Kratos",
+          "image": "images/plays/chars/GOW_R/KT.jpg"
+        },
+        {
+          "name": "Atreus",
+          "image": "images/plays/chars/GOW_R/AT.jpg"
+        },
+        {
+          "name": "Freya",
+          "image": "images/plays/chars/GOW_R/FY.jpg"
+        },
+        {
+          "name": "Thor",
+          "image": "images/plays/chars/GOW_R/TH.jpg"
+        },
+        {
+          "name": "Odin",
+          "image": "images/plays/chars/GOW_R/OD.jpg"
+        }
+      ]
+    },
+    {
+      "title": "THE LAST OF US: II",
+      "developer": "Naughty Dog",
+      "year": 2020,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/dp/B0CNY2BP4G?__mk_es_US=ÅMÅŽÕÑ&crid=ITL187COZQFC&dib=eyJ2IjoiMSJ9.9KRgt5SCrH7SUQT5xqsHYe3KtE1tQ_Nn-4Sf-rR75ed9C2pJi5-a7boroDTaYycllImJFrcVTQGthX6UOqwUzv2_se2GIsDJRHjkcbsIwbPjdkQUaHXJHuXd_Xifol1wFJdXUEoLXXpqRUxI0PvuKlFC5FM2LnR3Mq5vpQNzXSnWFIUtX5S1VqW06gjDxqIa-8TdlfBXCiBM-vXNO2FYu_ZqWiRCM8S2SNDyZsxOOx8.POBeVRMw1P9DWmVw72tO_edHd1IoAcFPb2h-RU2cAFY&dib_tag=se&keywords=the+last+of+us+2+ps5&qid=1764250584&sprefix=the+last+of+us+ps5%2Caps%2C169&sr=8-1",
+      "image": "images/plays/TLOU_2.jpg",
+      "backgroundVideo": "images/plays/b_videos/TLOU_2_BV.mp4",
+      "characters": [
+        {
+          "name": "Ellie",
+          "image": "images/plays/chars/TLOU_2/EL.jpg"
+        },
+        {
+          "name": "Abby",
+          "image": "images/plays/chars/TLOU_2/AB.jpg"
+        },
+        {
+          "name": "Joel",
+          "image": "images/plays/chars/TLOU_2/JL.jpg"
+        },
+        {
+          "name": "Dina",
+          "image": "images/plays/chars/TLOU_2/DN.jpg"
+        },
+        {
+          "name": "Lev",
+          "image": "images/plays/chars/TLOU_2/LEV.jpg"
+        }
+      ]
+    },
+    {
+      "title": "UNCHARTED 4: A THIEF'S END",
+      "developer": "Naughty Dog",
+      "year": 2016,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/Uncharted-Thief-End-Playstation/dp/B00GODZYNA?__mk_es_US=ÅMÅŽÕÑ&crid=SEU6ZMRVNY67&dib=eyJ2IjoiMSJ9.E455dk778u54GxOlaQRX1u52DcDh5twlDgCyxaR_sFrGjHj071QN20LucGBJIEps.epD7e_65WGO04IIVCObX9koPsfZ9DsMvADHcjNlJoBk&dib_tag=se&keywords=UNCHARTED+4%3A+A+THIEF%27S+END+ps5&qid=1764250604&sprefix=uncharted+4+a+thief%27s+end+ps5%2Caps%2C194&sr=8-1",
+      "image": "images/plays/UN_4.jpg",
+      "backgroundVideo": "images/plays/b_videos/UN_4_BV.mp4",
+      "characters": [
+        {
+          "name": "Nathan Drake",
+          "image": "images/plays/chars/UN_4/ND.jpg"
+        },
+        {
+          "name": "Elena Fisher",
+          "image": "images/plays/chars/UN_4/EF.jpg"
+        },
+        {
+          "name": "Victor Sullivan",
+          "image": "images/plays/chars/UN_4/VS.jpg"
+        },
+        {
+          "name": "Sam Drake",
+          "image": "images/plays/chars/UN_4/SD.jpg"
+        },
+        {
+          "name": "Nadine Ross",
+          "image": "images/plays/chars/UN_4/NR.jpg"
+        }
+      ]
+    },
+    {
+      "title": "CALL OF DUTY: MODERN WARFARE III",
+      "developer": "Infinity Ward",
+      "year": 2023,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/Call-Duty-Modern-Warfare-PlayStation-5/dp/B0CG2MDSMD?__mk_es_US=ÅMÅŽÕÑ&crid=3BLWQEQLBOIO7&dib=eyJ2IjoiMSJ9.OLD2o2ngT4WBlEyPFBs5-oVguy5EiRikb6J2Fero6kbJTqVqAfNYRNHkWNMbTsYb6mSPiAfh1SVuBBslho7lHyf1t8LLcawsVridqfGPmT8rXSP1C80DHRGTZLFKdzT4.vSxqDNPGr6nmT-MG8oXicg63L5Wc5XC2bF38fG9j2DI&dib_tag=se&keywords=CALL+OF+DUTY%3A+MODERN+WARFARE+III+ps5&qid=1764250623&sprefix=call+of+duty+modern+warfare+iii+ps5%2Caps%2C189&sr=8-1",
+      "image": "images/plays/COD_MF3.jpg",
+      "backgroundVideo": "images/plays/b_videos/COD_MF3_BV.mp4",
+      "characters": [
+        {
+          "name": "Captain Price",
+          "image": "images/plays/chars/COD_MF3/CP.jpg"
+        },
+        {
+          "name": "Soap MacTavish",
+          "image": "images/plays/chars/COD_MF3/SM.jpg"
+        },
+        {
+          "name": "Ghost",
+          "image": "images/plays/chars/COD_MF3/GT.jpg"
+        },
+        {
+          "name": "Farah Karim",
+          "image": "images/plays/chars/COD_MF3/FK.jpg"
+        },
+        {
+          "name": "Vladimir Makarov",
+          "image": "images/plays/chars/COD_MF3/VM.jpg"
+        }
+      ]
+    },
+    {
+      "title": "MARVEL'S SPIDER-MAN 2",
+      "developer": "Insomniac Games",
+      "year": 2023,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/1237216-Marvels-Spider-Man-2/dp/B0CM27RYVC?__mk_es_US=ÅMÅŽÕÑ&crid=5ND91N2ET8BS&dib=eyJ2IjoiMSJ9.35RgoxoO_Q6C4YOt0Gmd7ephIodwKbWEny1YJmM7GW9GJu2lHoIHD9MBj76jJSygoz7gMnLxzP4XZNdtDzvPyOOqO1JYFiIfQe9rW7faku05621eLM0n2-ekCzcc7LxhdArDYT-H62EtEip9AcTlnNFyjCknz8bc7FVLTOPxSubdv1SDqPyBUerTT3jhqOnRsumBmbXS_ZzS_2rOgNBCHiR0Q8o6wf4ulCzvsAkL-bg.1kYo0Mw8Dbl-qkc-mXCQfstaYPuUdP1ypqNRUOkAz6M&dib_tag=se&keywords=MARVEL%27S+SPIDER-MAN+2+ps5&qid=1764250645&sprefix=marvel%27s+spider-man+2+ps5%2Caps%2C183&sr=8-1",
+      "image": "images/plays/SP_2_P.jpg",
+      "backgroundVideo": "images/plays/b_videos/SP_2_BV.mp4",
+      "characters": [
+        {
+          "name": "Peter Parker",
+          "image": "images/plays/chars/SP_2/PP.jpg"
+        },
+        {
+          "name": "Miles Morales",
+          "image": "images/plays/chars/SP_2/MM.jpeg"
+        },
+        {
+          "name": "Mary Jane",
+          "image": "images/plays/chars/SP_2/MJ.jpg"
+        },
+        {
+          "name": "Venom",
+          "image": "images/plays/chars/SP_2/VN.jpg"
+        },
+        {
+          "name": "Kraven",
+          "image": "images/plays/chars/SP_2/KV.jpg"
+        }
+      ]
+    },
+    {
+      "title": "HORIZON FORBIDDEN WEST",
+      "developer": "Guerrilla Games",
+      "year": 2022,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/9720690-Horizon-Forbidden-West-PS5/dp/B09FBCRKC9?__mk_es_US=ÅMÅŽÕÑ&crid=3Q9AJL9VEFA9T&dib=eyJ2IjoiMSJ9.naHNOd-mOytA-3ADrz3u-ggax177AseD0SESeREWP-9p3syboJUDV3XNKi9DBst_dQpEJJeo_wJ6gMdU1XZsp7kkb_5oufzn7UwByOyo_6XqSWrIedoFU91qko20YLnZtdpWSQ_tnMk6KBqDcCddlpXGXYhNixKJqRmcr1J91PD2TpMHR3pd3ySwMOyeXRuF37ic00XyWOwq9bWxFGvtTrdHM-HVTr7yg9tkfRKharQ.fEBCtRBZBmGUpZTebVYoI0xHnYAYzT6V9aSjdSoUK_U&dib_tag=se&keywords=HORIZON+FORBIDDEN+WEST+ps5&qid=1764250663&sprefix=horizon+forbidden+west+ps5%2Caps%2C182&sr=8-1",
+      "image": "images/plays/HORIZON_FW.jpg",
+      "backgroundVideo": "images/plays/b_videos/HORIZON_FW_BV.mp4",
+      "characters": [
+        {
+          "name": "Aloy",
+          "image": "images/plays/chars/HORIZON_FW/AL.jpg"
+        },
+        {
+          "name": "Erend",
+          "image": "images/plays/chars/HORIZON_FW/ER.jpg"
+        },
+        {
+          "name": "Varl",
+          "image": "images/plays/chars/HORIZON_FW/VR.jpg"
+        },
+        {
+          "name": "Zo",
+          "image": "images/plays/chars/HORIZON_FW/ZO.jpg"
+        },
+        {
+          "name": "Sylens",
+          "image": "images/plays/chars/HORIZON_FW/SY.jpg"
+        }
+      ]
+    },
+    {
+      "title": "GOD OF WAR (2018)",
+      "developer": "Santa Monica Studio",
+      "year": 2018,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/God-War-Sony-PlayStation-4/dp/B01GVRZZGY?__mk_es_US=ÅMÅŽÕÑ&crid=39LGZLPNVCILA&dib=eyJ2IjoiMSJ9.JZx3O2wOaGTQ5yHii_7cwgeM4dwrinQT1hI-Uj3fF5VPqK0qLNJ8ea1VczyBVkWOyXHBYYUMddFckoIu01WqXg.btx4FrUhjE6JX4HeTHgGfPoVl4L8ZeGndqgv4guV9zY&dib_tag=se&keywords=GOD+OF+WAR+%282018%29+ps5&qid=1764250683&sprefix=god+of+war+2018+ps5%2Caps%2C185&sr=8-1",
+      "image": "images/plays/GOW_18.jpg",
+      "backgroundVideo": "images/plays/b_videos/GOW_18_BV.mp4",
+      "characters": [
+        {
+          "name": "Kratos",
+          "image": "images/plays/chars/GOW_18/KR.jpg"
+        },
+        {
+          "name": "Atreus",
+          "image": "images/plays/chars/GOW_18/AT.jpg"
+        },
+        {
+          "name": "Freya",
+          "image": "images/plays/chars/GOW_18/FY.jpg"
+        },
+        {
+          "name": "Baldur",
+          "image": "images/plays/chars/GOW_18/BL.jpg"
+        },
+        {
+          "name": "Mimir",
+          "image": "images/plays/chars/GOW_18/MM.jpg"
+        }
+      ]
+    },
+    {
+      "title": "ELDEN RING",
+      "developer": "FromSoftware",
+      "year": 2022,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/Elden-Ring-Shadow-Erdtree-PlayStation-5/dp/B0CVSJ1JVC?__mk_es_US=ÅMÅŽÕÑ&crid=16FEBE79Y7H4C&dib=eyJ2IjoiMSJ9.O6NDXnYGK481SmUlrGhxVFCPgFYp2lp5IL4lbbVVWclo3bMgbOY6I1rq_xztXzbTyePKmDq3SHgTOfbOWOTU6S8AQbJkEufIdri6HjYmGuVZcXEbSjr41US-PDDOHX2OprB1nn7ZNOW1dCiAkSfHT6xe7eaIp0SZ6HF_Eur2cyoTCGX4kXDO6GftWnRW0uQG23oBmOFFlSCoNh-ZSys0doPZXk0YDphNqRN1mRUf4lo.YbLFVJ8cDLixYuzNwU9-uQDXgoAEmDLxSdUtl9txdNA&dib_tag=se&keywords=ELDEN%2BRING%2Bps5&qid=1764250701&sprefix=elden%2Bring%2Bps5%2Caps%2C187&sr=8-1&th=1",
+      "image": "images/plays/ER.jpg",
+      "backgroundVideo": "images/plays/b_videos/ER_BV.mp4",
+      "characters": [
+        {
+          "name": "Tarnished",
+          "image": "images/plays/chars/ER/TN.jpg"
+        },
+        {
+          "name": "Melina",
+          "image": "images/plays/chars/ER/ML.jpg"
+        },
+        {
+          "name": "Ranni",
+          "image": "images/plays/chars/ER/RN.jpg"
+        },
+        {
+          "name": "Radahn",
+          "image": "images/plays/chars/ER/RD.png"
+        },
+        {
+          "name": "Malenia",
+          "image": "images/plays/chars/ER/MA.jpg"
+        }
+      ]
+    },
+    {
+      "title": "RATCHET & CLANK: RIFT APART",
+      "developer": "Insomniac Games",
+      "year": 2021,
+      "rating": "E10+",
+      "amazonLink": "https://www.amazon.com/-/es/Ratchet-Clank-Rift-Apart-PlayStation-5/dp/B095T8C99C?__mk_es_US=ÅMÅŽÕÑ&crid=2VUG6BBKIZAC9&dib=eyJ2IjoiMSJ9.PKCmpM3T9rC-59qccH1Rv65eeGA83RgK59vX85Wmj8QnYp-UHjRmWI0YbPle_ku56XKz5G_CXUImp_zYvOloWaDvmXKdDi9IVlehSoNIeJXfjkv47NY4Np5UX2fV1pxYzLDzA75aBOcdvy5zJRQLjw.A7xRMbxjdmdYGArW2kBJrjNbQnVzAkm6bA0-xPTQEj8&dib_tag=se&keywords=RATCHET+%26+CLANK%3A+RIFT+APART+ps5&qid=1764250723&sprefix=ratchet+%26+clank+rift+apart+ps5%2Caps%2C188&sr=8-1",
+      "image": "images/plays/RC.jpg",
+      "backgroundVideo": "images/plays/b_videos/RC_BV.mp4",
+      "characters": [
+        {
+          "name": "Ratchet",
+          "image": "images/plays/chars/RC/RT.jpg"
+        },
+        {
+          "name": "Clank",
+          "image": "images/plays/chars/RC/CL.jpg"
+        },
+        {
+          "name": "Rivet",
+          "image": "images/plays/chars/RC/RV.jpg"
+        },
+        {
+          "name": "Kit",
+          "image": "images/plays/chars/RC/KIT.jpg"
+        },
+        {
+          "name": "Emperor Nefarious",
+          "image": "images/plays/chars/RC/EN.jpg"
+        }
+      ]
+    },
+    {
+      "title": "DEMON'S SOULS (REMAKE)",
+      "developer": "Bluepoint Games",
+      "year": 2020,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/Demons-Souls-PlayStation-5/dp/B089ZMS3BF?__mk_es_US=ÅMÅŽÕÑ&crid=2JUJU7116NUCN&dib=eyJ2IjoiMSJ9.ugGC0uy1l0KoOh3dOy-gKBK8iJV7zwscOhxEBYnEQ6Y.6cpDaynJKEGZw_94HwM23-r7l8bNhzoT5PoG6FU1pSA&dib_tag=se&keywords=DEMON%27S+SOULS+%28REMAKE%29+ps&qid=1764250763&sprefix=demon%27s+souls+remake+ps5%2Caps%2C177&sr=8-1",
+      "image": "images/plays/DS.jpg",
+      "backgroundVideo": "images/plays/b_videos/DS_BV.mp4",
+      "characters": [
+        {
+          "name": "Slayer of Demons",
+          "image": "images/plays/chars/DS/SOD.jpg"
+        },
+        {
+          "name": "Maiden in Black",
+          "image": "images/plays/chars/DS/MIB.jpg"
+        },
+        {
+          "name": "Old King Allant",
+          "image": "images/plays/chars/DS/OKA.jpg"
+        },
+        {
+          "name": "Fool's Idol",
+          "image": "images/plays/chars/DS/FI.jpg"
+        },
+        {
+          "name": "Dragon God",
+          "image": "images/plays/chars/DS/DG.jpg"
+        }
+      ]
+    },
+    {
+      "title": "GHOST OF TSUSHIMA: DIRECTOR'S CUT",
+      "developer": "Sucker Punch Productions",
+      "year": 2021,
+      "rating": "M",
+      "amazonLink": "https://www.amazon.com/-/es/Ghost-Tsushima-Directors-Cut-PlayStation/dp/B09DCSMM4N?__mk_es_US=ÅMÅŽÕÑ&crid=OFEOUE4IKJQB&dib=eyJ2IjoiMSJ9.xstWu64Jq5eLJZRMFCC3FW31KiZACatJwzFFtWSwTYRT3KF-fLRGt9pUZUCoa8qqh1ShJngCcZUa21Xw1lPMKcPnanZ8d1AO9Z2Hpyx1RB-hKMcdZnQJ_wOZQQKqmA-_HMaS2FvZm5xN7jFcKiYH1Q.JoBckVwsvTNuuERI_Qjxhzcf5ItgTcutrPgNlaDhTPk&dib_tag=se&keywords=GHOST+OF+TSUSHIMA%3A+DIRECTOR%27S+CUT+ps&qid=1764250779&sprefix=ghost+of+tsushima+director%27s+cut+ps%2Caps%2C172&sr=8-1",
+      "image": "images/plays/GOT_DC.jpg",
+      "backgroundVideo": "images/plays/b_videos/GOT_DC_BV.mp4",
+      "characters": [
+        {
+          "name": "Jin Sakai",
+          "image": "images/plays/chars/GOT_DC/JS.jpg"
+        },
+        {
+          "name": "Lord Shimura",
+          "image": "images/plays/chars/GOT_DC/LS.jpg"
+        },
+        {
+          "name": "Yuna",
+          "image": "images/plays/chars/GOT_DC/YN.jpg"
+        },
+        {
+          "name": "Khotun Khan",
+          "image": "images/plays/chars/GOT_DC/KK.jpg"
+        },
+        {
+          "name": "Ryuzo",
+          "image": "images/plays/chars/GOT_DC/RY.jpg"
+        }
+      ]
+    },
+    {
+      "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "developer": "Square Enix",
+      "year": 2021,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/FINAL-FANTASY-REMAKE-INTERGRADE-PlayStation-5/dp/B08XNRM6QN?__mk_es_US=ÅMÅŽÕÑ&crid=1D8D1WKWADPBU&dib=eyJ2IjoiMSJ9.8F_crhP5rweKxfekVdHX7yh6jAj_26TnM5Jmv1r9D8payUhB2h7bj2YGMdkZ7U9sCXShg7FD9YPpuKc24fMQ4spYxIN7cd0Mrb8Z6FzlKtw.GowccLmijYwe-NFW2AGZoDUp3BWQ5tELqZHYYfy3zuM&dib_tag=se&keywords=FINAL%2BFANTASY%2BVII%2BREMAKE%2BINTERGRADE%2Bps&qid=1764250798&sprefix=final%2Bfantasy%2Bvii%2Bremake%2Bintergrade%2Bps%2Caps%2C172&sr=8-1&th=1",
+      "image": "images/plays/FF_VII.jpg",
+      "backgroundVideo": "images/plays/b_videos/FF_VII_BV.mp4",
+      "characters": [
+        {
+          "name": "Cloud Strife",
+          "image": "images/plays/chars/FF_VII/CS.jpg"
+        },
+        {
+          "name": "Tifa Lockhart",
+          "image": "images/plays/chars/FF_VII/TL.jpg"
+        },
+        {
+          "name": "Aerith Gainsborough",
+          "image": "images/plays/chars/FF_VII/AG.jpg"
+        },
+        {
+          "name": "Barret Wallace",
+          "image": "images/plays/chars/FF_VII/BW.jpg"
+        },
+        {
+          "name": "Sephiroth",
+          "image": "images/plays/chars/FF_VII/SP.jpg"
+        }
+      ]
+    }
+  ]
+}

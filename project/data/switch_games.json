@@ -1,0 +1,376 @@
+{
+  "games": [
+    {
+      "title": "THE LEGEND OF ZELDA: TEARS OF THE KINGDOM",
+      "developer": "Nintendo EPD",
+      "year": 2023,
+      "rating": "E10+",
+      "amazonLink": "https://www.amazon.com/-/es/Legend-Zelda-Kingdom-videojuego-Nintendo-Version/dp/B097B2YWFX?crid=1PMOVRHSF58M5&dib=eyJ2IjoiMSJ9.6Ym22t95VQ0KACC_OX0qGmbERELZGlXM_1SII30I97zk9k4jVk05hwn4RiHdPkaNDpBi9TATGoFMdx5YeCXnbmSPJVwegsL78MMtbVvZIL5iAk38aUAm3GHIrd7qnPJMA7iz5wPjaVwSwJzs2xQQTMeMvifHbSUHyLp9ERh17sDN0L7ZNx0TSz4fyipx9MnC-xxPuRTETmC_seaVdZreogh79O3SsaI38Aq-HmtUieQ.QgQRuA3JlTet7n39izCEpu62bXfiRZWRyESlN804ICM&dib_tag=se&keywords=the+legend+of+zelda+tears+of+the+kingdom&nsdOptOutParam=true&qid=1764249741&sprefix=the+legen+of+zelda%3A+tears+of%2Caps%2C191&sr=8-1",
+      "image": "images/switch/TLZ-TK.jpg",
+      "backgroundVideo": "images/switch/b_videos/TLZ-TK_BV.mp4",
+      "characters": [
+        {
+          "name": "Link",
+          "image": "images/switch/chars/TLZ-TK/LN.jpg"
+        },
+        {
+          "name": "Zelda",
+          "image": "images/switch/chars/TLZ-TK/ZL.jpg"
+        },
+        {
+          "name": "Ganondorf",
+          "image": "images/switch/chars/TLZ-TK/GF.jpg"
+        },
+        {
+          "name": "Rauru",
+          "image": "images/switch/chars/TLZ-TK/RR.jpg"
+        },
+        {
+          "name": "Sonia",
+          "image": "images/switch/chars/TLZ-TK/SN.jpg"
+        }
+      ]
+    },
+    {
+      "title": "SUPER MARIO ODYSSEY",
+      "developer": "Nintendo EPD",
+      "year": 2017,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Super-Odyssey-Nintendo-Switch-European-Version/dp/B01MUA0D2A?crid=RO8S50SMLE1V&dib=eyJ2IjoiMSJ9.ddbq_xmZwUqeVwB1JmrvrMiS55jD8L-lbjZQToX62DJpoO1aNQVPxJL5IOBwaN9QO8KxKgiJVLozHZj4V9bgXRaQK8w-tzvUSjIA_4iaugWc5Ih0UP2n1zuNihppS0QMSTW7H_Q1K3bmb6Kj7U9ZPYJOhLw1YcCi9XU7OKe1sQmvLupjNsM3v6B6VMtNVABi5ZMRyKEG7IkqguTM5JRieCSy3zRfAiLV98pmZQijfOA.nYJahQ0xKlCrJ78OsYA3apw8DYd33mdv-Wst-_chRaE&dib_tag=se&keywords=super+mario+odyssey+switch&qid=1764249789&sprefix=super+mario+odysseyswitch%2Caps%2C165&sr=8-2",
+      "image": "images/switch/MARIO_OD.jpg",
+      "backgroundVideo": "images/switch/b_videos/MARIO_OD_BV.mp4",
+      "characters": [
+        {
+          "name": "Mario",
+          "image": "images/switch/chars/MARIO_OD/MR.jpg"
+        },
+        {
+          "name": "Cappy",
+          "image": "images/switch/chars/MARIO_OD/CY.jpg"
+        },
+        {
+          "name": "Luigi",
+          "image": "images/switch/chars/MARIO_OD/LG.jpg"
+        },
+        {
+          "name": "Bowser",
+          "image": "images/switch/chars/MARIO_OD/BW.jpg"
+        },
+        {
+          "name": "Peach",
+          "image": "images/switch/chars/MARIO_OD/PE.jpg"
+        }
+      ]
+    },
+    {
+      "title": "MARIO KART 8 DELUXE",
+      "developer": "Nintendo EPD",
+      "year": 2017,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Mario-Kart-Deluxe-nintendo_switch-Nintendo-Switch/dp/B01N4ND0F9?__mk_es_US=ÅMÅŽÕÑ&crid=1MN68W16LHNJN&dib=eyJ2IjoiMSJ9.WntxsqkM3NL785m1Pb5CWke2f4sN0z-W_k0DBCJ6RwpW7FHXPmw0jMsJxIPNu46Uv74DVQmm_FfSeGG9qEB6Sg1TFkbx_C78ugFuQL54I3Miy4PWCKRgyjBlRgCzyyXJqAxhJdj_X7mmRjBpd0K4rZvgLAqrK5KO-0OWkbZhCUPWbIrvp5xJSxNToUp7Uz2ESumTAqruF4bgPlYEsD7ZUKIANEsqDssTBJxpRcolfvk.LQe_0Vyl_oPRptQOo_5t9gD-7wJRinBamS4-m8N1_mo&dib_tag=se&keywords=mario+kart+8+deluxe+switch&qid=1764249813&sprefix=mario+kart+8+deluxe+switch%2Caps%2C224&sr=8-2",
+      "image": "images/switch/MARIOK_8.jpg",
+      "backgroundVideo": "images/switch/b_videos/MARIOK_8_BV.mp4",
+      "characters": [
+        {
+          "name": "Mario",
+          "image": "images/switch/chars/MARIOK_8/MR.jpg"
+        },
+        {
+          "name": "Luigi",
+          "image": "images/switch/chars/MARIOK_8/LG.jpg"
+        },
+        {
+          "name": "Peach",
+          "image": "images/switch/chars/MARIOK_8/PE.jpg"
+        },
+        {
+          "name": "Bowser",
+          "image": "images/switch/chars/MARIOK_8/BW.jpg"
+        },
+        {
+          "name": "Yoshi",
+          "image": "images/switch/chars/MARIOK_8/YS.jpg"
+        }
+      ]
+    },
+    {
+      "title": "ANIMAL CROSSING: NEW HORIZONS",
+      "developer": "Nintendo EPD",
+      "year": 2020,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Animal-Crossing-New-Horizons-Nintendo-Switch/dp/B07SL6ZXBL?__mk_es_US=ÅMÅŽÕÑ&crid=JJQL9M2DT1ZO&dib=eyJ2IjoiMSJ9.1e6rp0EIz5dppysZ0raMzzTNvUed5xEq3woqKAwUJEUYb0paEZtpS3f1vD6qeKEmugMfR681QOKC6c2n28AYaQ9fKMuGqtmDhiC37Qr2vqK_STxnvEO-MDU3FvRAZEfIWuCbVWq-KM1n3SxNtrHiWOi9TdWabYVMur0zWvZq8esUA9y_fM3YA3B4FP84N4bPuSVpvJ91BQgY0uQNJQVZlFPC014uWBpT1Js-7ypzQcY.7O4a8JdsdhyFl-3WupsB9-DFnlbNClkUerYr0VJDaDc&dib_tag=se&keywords=animal%2Bcrossing%2Bnew%2Bhorizons%2Bswitch&qid=1764249837&sprefix=animal%2Bcrossing%2Bnew%2Bhorizon%2Bswitch%2Caps%2C159&sr=8-1&th=1",
+      "image": "images/switch/AC_H.jpg",
+      "backgroundVideo": "images/switch/b_videos/AC_H_BV.mp4",
+      "characters": [
+        {
+          "name": "Player",
+          "image": "images/switch/chars/AC_H/PL.jpg"
+        },
+        {
+          "name": "Tom Nook",
+          "image": "images/switch/chars/AC_H/TN.jpg"
+        },
+        {
+          "name": "Isabelle",
+          "image": "images/switch/chars/AC_H/IL.jpg"
+        },
+        {
+          "name": "K.K. Slider",
+          "image": "images/switch/chars/AC_H/KKS.jpg"
+        },
+        {
+          "name": "Blathers",
+          "image": "images/switch/chars/AC_H/BT.jpg"
+        }
+      ]
+    },
+    {
+      "title": "SUPER SMASH BROS ULTIMATE",
+      "developer": "Bandai Namco Studios",
+      "year": 2018,
+      "rating": "E10+",
+      "amazonLink": "https://www.amazon.com/-/es/Super-Smash-Bros-Ultimate-Nintendo-Interruptor/dp/B01N5OKGLH?__mk_es_US=ÅMÅŽÕÑ&crid=37S5R4711E3P7&dib=eyJ2IjoiMSJ9.T5zPapDs3-SrwrmYimNKhMK-fGZ7P6NrD96DVkNJSsfGjHj071QN20LucGBJIEps.3rhoaQZVtzwz5KJlEEImxzQJxB7lWVmUf_ouz_FTSxs&dib_tag=se&keywords=super+smash+bross+ultimate+switch&qid=1764249863&sprefix=super+smash+bros+ultimate+switch%2Caps%2C171&sr=8-2",
+      "image": "images/switch/SSB_U.jpg",
+      "backgroundVideo": "images/switch/b_videos/SSB_U_BV.mp4",
+      "characters": [
+        {
+          "name": "Mario",
+          "image": "images/switch/chars/SSB_U/MR.jpg"
+        },
+        {
+          "name": "Link",
+          "image": "images/switch/chars/SSB_U/LN.jpg"
+        },
+        {
+          "name": "Pikachu",
+          "image": "images/switch/chars/SSB_U/PK.jpg"
+        },
+        {
+          "name": "Kirby",
+          "image": "images/switch/chars/SSB_U/KB.jpg"
+        },
+        {
+          "name": "Donkey Kong",
+          "image": "images/switch/chars/SSB_U/DK.jpg"
+        }
+      ]
+    },
+    {
+      "title": "POKÉMON SCARLET",
+      "developer": "Game Freak",
+      "year": 2022,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Pokémon-Scarlet-US-Version-Nintendo-Switch/dp/B09TM8XRND?__mk_es_US=ÅMÅŽÕÑ&crid=1Z7JMXZFMK74U&dib=eyJ2IjoiMSJ9.JLaoTs5ZSXShy7MiMcx4cdowQ8K1atkyfdl5XH5mWR01rOx45EoM7iH2Eo68Z2t4vDCycM-qKJ6gGQb0AvyS8DwNJ7kaEOBrQOi433CrAhgGM6hGjMxiRAKg0mclLzFdkR6Ja2R243O5T_xMXlrBj_wlczI4cdSBYqMZRhwvpcOw8JQLXaLFp6kdHwi-t55VD9PeuampFYniYSWsTR5Zg4zcI2RpPn2s6XIpRzx8FW0.jwkoExTR2lNbSeUjSxqlsrIemEM0Ki1LlAUMqzWV0EY&dib_tag=se&keywords=pokemon+scarlet+switch&qid=1764249886&sprefix=poken+scarlet+switch%2Caps%2C154&sr=8-1",
+      "image": "images/switch/PS.jpg",
+      "backgroundVideo": "images/switch/b_videos/PS_BV.mp4",
+      "characters": [
+        {
+          "name": "Player",
+          "image": "images/switch/chars/PS/PL.jpg"
+        },
+        {
+          "name": "Nemona",
+          "image": "images/switch/chars/PS/NM.jpg"
+        },
+        {
+          "name": "Arven",
+          "image": "images/switch/chars/PS/AV.jpg"
+        },
+        {
+          "name": "Professor Sada",
+          "image": "images/switch/chars/PS/PS.jpg"
+        },
+        {
+          "name": "Koraidon",
+          "image": "images/switch/chars/PS/KD.jpg"
+        }
+      ]
+    },
+    {
+      "title": "METROID DREAD",
+      "developer": "MercurySteam",
+      "year": 2021,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/Metroid-Dread-Nintendo-Switch/dp/B097BP5DLQ?__mk_es_US=ÅMÅŽÕÑ&crid=3RES152VFU53&dib=eyJ2IjoiMSJ9.DVAgio_ip1BraXs_qVHcT76phYGYlAzjp057W-cnvWKJ2WU4TztEUmwjN-7zbf_-dymEIASYoPv_i_1W7nn1vQ1iX2eNXkddcETVLCtPJxI92ICE5MU9mlqeXniSht2eA0T7HdfQBjh4Rt8eeXLJXGpsJhtOuF9iF1uOIElrPYY61TyVHp_VfTNfDX_zEVX8tLVUMuAjqYDpat6Lh6mf8ra5KAFo8vLToiCqnRpcByg.biHW2SI5nBZs2jNIpnCHX9UPBelbILgyL6fqDR1QVkw&dib_tag=se&keywords=metroid+dread+switch&qid=1764249912&sprefix=metroid+dread+switch%2Caps%2C163&sr=8-1",
+      "image": "images/switch/ MD.jpg",
+      "backgroundVideo": "images/switch/b_videos/MD_BV.mp4",
+      "characters": [
+        {
+          "name": "Samus Aran",
+          "image": "images/switch/chars/MD/SA.jpg"
+        },
+        {
+          "name": "Raven Beak",
+          "image": "images/switch/chars/MD/RB.jpg"
+        },
+        {
+          "name": "Adam Malkovich",
+          "image": "images/switch/chars/MD/AM.jpg"
+        },
+        {
+          "name": "E.M.M.I.",
+          "image": "images/switch/chars/MD/EM.jpg"
+        },
+        {
+          "name": "Quiet Robe",
+          "image": "images/switch/chars/MD/QR.jpg"
+        }
+      ]
+    },
+    {
+      "title": "LUIGI'S MANSION 3",
+      "developer": "Next Level Games",
+      "year": 2019,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Luigis-Mansion-Standard-Nintendo-European-Version/dp/B07SKJ4WJT?__mk_es_US=ÅMÅŽÕÑ&crid=2BQHPYY4B6FAG&dib=eyJ2IjoiMSJ9.pzQO3j11ZQxl1MAbqO9aWataQVP2SPsR47wzOqcWEmaAhNktUL3Ov5yzmQPehxZvTf7cPotuMW6K1d-bImsPBEyQ7XAS52jnZffSHI51y3UB2uJwGDFTiPIeeE9ZQNo7aD1MdyXHS6i4SwbdDlrDsxLhCu-RzIT0vIvEMk8eJH-VDu6JPWJpWc_LNIvstKN7dnzM-_1AARLqfrOpRGoRtmdwlEIB1jd3QwH9cxQHlc0.i-nMe7WayaXUAHvLSZG28wadsFAIaBSrb3B_N8ZGgzA&dib_tag=se&keywords=luigi%27s%2Bmansion%2B3%2Bswitch&qid=1764249943&sprefix=luiguis%2Bmansion%2B3%2Bswitch%2Caps%2C127&sr=8-1&th=1",
+      "image": "images/switch/ LM_3.jpg",
+      "backgroundVideo": "images/switch/b_videos/LM_3_BV.mp4",
+      "characters": [
+        {
+          "name": "Luigi",
+          "image": "images/switch/chars/LM_3/LG.jpg"
+        },
+        {
+          "name": "Gooigi",
+          "image": "images/switch/chars/LM_3/GG.jpg"
+        },
+        {
+          "name": "Mario",
+          "image": "images/switch/chars/LM_3/MR.jpg"
+        },
+        {
+          "name": "Professor E. Gadd",
+          "image": "images/switch/chars/LM_3/PEG.jpg"
+        },
+        {
+          "name": "King Boo",
+          "image": "images/switch/chars/LM_3/KB.jpg"
+        }
+      ]
+    },
+    {
+      "title": "SPLATOON 3",
+      "developer": "Nintendo EPD",
+      "year": 2022,
+      "rating": "E10+",
+      "amazonLink": "https://www.amazon.com/-/es/Splatoon-Nintendo-Switch-Video-Game-Android/dp/B0BQ6PSLZC?__mk_es_US=ÅMÅŽÕÑ&crid=1R8BGQCMBY48S&dib=eyJ2IjoiMSJ9.rjmkEm_LNxPvFa75qnkd4s1g5qK5gnALLY_2WjZG25_dkhhtnlYQrI9Pdt7MKyTfo2b7-SK1YBgranqqJ37NE77JJ29DEVSr0JXM6RIrBK_qTcf_RosoJUwYiEz533NJgp_pY7Mvkoe2LXVxEG0rpDqrxo6z4_cVTB_djK-M2pzVCT5N8VrhYwsjAIzcMUagmlggm4UsEw_veA9d5RpIGJHqUQbeOgO7cpCN6m5CruQ.5F9y30kYaTnZH7aBRfgDUpJC4jNrtxXWwYlC3aMXMcc&dib_tag=se&keywords=splatoon+3+switch&qid=1764249962&sprefix=splatoon+3+switch%2Caps%2C167&sr=8-1",
+      "image": "images/switch/SP3.jpg",
+      "backgroundVideo": "images/switch/b_videos/SP3_BV.mp4",
+      "characters": [
+        {
+          "name": "Agent 3",
+          "image": "images/switch/chars/SP3/A3.jpg"
+        },
+        {
+          "name": "Smallfry",
+          "image": "images/switch/chars/SP3/SF.jpg"
+        },
+        {
+          "name": "Callie",
+          "image": "images/switch/chars/SP3/CL.jpg"
+        },
+        {
+          "name": "Marie",
+          "image": "images/switch/chars/SP3/MR.jpg"
+        },
+        {
+          "name": "Craig Cuttlefish",
+          "image": "images/switch/chars/SP3/CC.jpg"
+        }
+      ]
+    },
+    {
+      "title": "DONKEY KONG BANANZA",
+      "developer": "Nintendo EPD",
+      "year": 2025,
+      "rating": "E",
+      "amazonLink": "https://www.amazon.com/-/es/Donkey-Kong-Bananza-Nintendo-Interruptor-2/dp/B0F66KLYVH?__mk_es_US=ÅMÅŽÕÑ&crid=2ROLMYC369XVS&dib=eyJ2IjoiMSJ9.ydR4VMjQWd7jZfjHq_0xopzK6zz3bEtzhoYRRtmLqG-BhDeUZC4UkvVXxGeKgwLhv9MkPvc8iyz8lDwb2NGFgbRd2WgjUquyOsr_hVNegZmJk7dPG59-Vq9rbvArX-Kpf53foBQc-HzjEF9nYj2CeVHqCjQYOrjge7QRItXrszBkmn2im96zd4d5fWnHRwM5N5C-Oke7_T1SHGwo0oOCFpgmot2n6sPU1OOjhkIfYFQ.m7WBrDQg_zg7zrI5QvLHhXmYHhRK-PNKR62cAdGuF28&dib_tag=se&keywords=donkey+kong+bonanza+switch&qid=1764249988&sprefix=donkey+kong+banana+switch%2Caps%2C159&sr=8-1",
+      "image": "images/switch/DKB.png",
+      "backgroundVideo": "images/switch/b_videos/DKB_BV.mp4",
+      "characters": [
+        {
+          "name": "Donkey Kong",
+          "image": "images/switch/chars/DKB/DK.jpg"
+        },
+        {
+          "name": "Diddy Kong",
+          "image": "images/switch/chars/DKB/DDK.jpg"
+        },
+        {
+          "name": "Dixie Kong",
+          "image": "images/switch/chars/DKB/DXK.jpg"
+        },
+        {
+          "name": "Cranky Kong",
+          "image": "images/switch/chars/DKB/CK.jpg"
+        },
+        {
+          "name": "Funky Kong",
+          "image": "images/switch/chars/DKB/FK.jpg"
+        }
+      ]
+    },
+    {
+      "title": "XENOBLADE CHRONICLES 3",
+      "developer": "Monolith Soft",
+      "year": 2022,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/Xenoblade-Chronicles-3-Nintendo-Switch/dp/B09KRH3FD6?__mk_es_US=ÅMÅŽÕÑ&crid=1TAVOZQZVX85J&dib=eyJ2IjoiMSJ9.vmTy0DnmDgYymV5ci8gyWd88Ce7tFYyD0M0ux3b-GbOEE34xua3_ubat4HQiUSYnXum-5r-otXw7eYCCwzBUEjw_3YgMV2LdTJBNX-wA2IyzXIlwfZYSKvtAGPhlOAtbf7uTKqmT2RVD-3l7keLwciTGloSttSAA1c09xiTUYAo2Oayu08nBuc5DQ7N809WBipVIHPaOUDWU1w3iz6pABNBgbyE_sdLnTyt8nnHqU_c.Gn6b1aR-IFfH7VoZ7oVAEgEnE05Nvp3fbnSSSW5Z73k&dib_tag=se&keywords=XENOBLADE+CHRONICLES+3+switch&qid=1764250006&sprefix=xenoblade+chronicles+3+switch%2Caps%2C199&sr=8-1",
+      "image": "images/switch/XC3.jpg",
+      "backgroundVideo": "images/switch/b_videos/XC3_BV.mp4",
+      "characters": [
+        {
+          "name": "Noah",
+          "image": "images/switch/chars/XC3/NH.jpg"
+        },
+        {
+          "name": "Mio",
+          "image": "images/switch/chars/XC3/MIO.jpeg"
+        },
+        {
+          "name": "Eunie",
+          "image": "images/switch/chars/XC3/EN.jpg"
+        },
+        {
+          "name": "Taion",
+          "image": "images/switch/chars/XC3/TN.jpg"
+        },
+        {
+          "name": "Lanz",
+          "image": "images/switch/chars/XC3/LZ.jpg"
+        }
+      ]
+    },
+    {
+      "title": "FIRE EMBLEM ENGAGE",
+      "developer": "Intelligent Systems",
+      "year": 2023,
+      "rating": "T",
+      "amazonLink": "https://www.amazon.com/-/es/Fire-EmblemTM-Engage-Nintendo-Switch/dp/B0BF1W7K23?__mk_es_US=ÅMÅŽÕÑ&crid=257QFDOZ47SRG&dib=eyJ2IjoiMSJ9.OoYizSOA212Ncs6Dd7De9WPr3Zbyi5_ZC8dGmoWeqn5L0oUwdxiKXOXVmLz96WFCX2ef9R0BRVADVbrvfnTvrJcxZ-xjifrbgDOcyTVVSs1Pb2Q0cxL7t6Vp3hmmtks8ELzGevJVJ8mudjN6Zb2c73cjWQca-FtlNU0ZB2_oChRfAW10ALnyZcPDu2ub4Pg9MxqnjMZJEJ1VYtteSZlkbRr4T2Nucz6NlwyhH4bMK1w.PXmc68kT8ebMzy0RZlfoiGgpAjHTBhFizNG6Wp75N5E&dib_tag=se&keywords=FIRE+EMBLEM+ENGAGE+switch&qid=1764250023&sprefix=fire+emblem+engage+switch%2Caps%2C186&sr=8-1",
+      "image": "images/switch/FEE.jpg",
+      "backgroundVideo": "images/switch/b_videos/FEE_BV.mp4",
+      "characters": [
+        {
+          "name": "Alear",
+          "image": "images/switch/chars/FEE/AL.jpg"
+        },
+        {
+          "name": "Vander",
+          "image": "images/switch/chars/FEE/VD.jpg"
+        },
+        {
+          "name": "Alfred",
+          "image": "images/switch/chars/FEE/AF.jpg"
+        },
+        {
+          "name": "Céline",
+          "image": "images/switch/chars/FEE/CL.jpg"
+        },
+        {
+          "name": "Chloé",
+          "image": "images/switch/chars/FEE/CH.jpg"
+        }
+      ]
+    }
+  ]
+}
