@@ -64,7 +64,9 @@ loadRetroGamesCatalog: Loads and displays classic retro games.
 animateHamburgerMenu: Adds smooth animations to the hamburger menu icon.
 
 Wireframes / Moqups links (WIREFRAMES)
+    
     DESKOPT - https://app.moqups.com/Seo8LBdEXoEC3CQ3IbC5ZtAFrkPd1Vwi/view/page/ad64222d5
+    
     MOBILE - https://app.moqups.com/O5WwD7aMUeK7P9FCzbA4kaZxIwEZmEqV/view/page/ad64222d5
 
 External Data
