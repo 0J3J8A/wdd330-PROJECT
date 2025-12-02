@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
+  // LIST GOTY GAMES XBOX PAGE (ONLY The Witcher 3)
+  const gotyGames = {
+    "THE WITCHER 3: WILD HUNT": "2015"
+  };
+
   // DISPLAY THE DIALOG
   function showGameDialog(game) {
     const overlay = document.createElement('div');
@@ -55,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     videoContainer.appendChild(video);
     dialog.appendChild(videoContainer);
 
-
     const content = document.createElement('div');
     content.className = 'dialog-content';
 
@@ -65,7 +69,91 @@ document.addEventListener('DOMContentLoaded', function () {
                 <p><strong>Developer:</strong> ${game.developer}</p>
                 <p><strong>Release Year:</strong> ${game.year}</p>
                 <p><strong>Rating:</strong> ${game.rating}</p>
-                <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+                <div class="button-container">
+                    <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+                    <button class="learn-more-button">Learn More</button>
+                </div>
+            </div>
+            <button class="close-dialog">✕ Close</button>
+        `;
+
+    dialog.appendChild(content);
+    document.body.appendChild(dialog);
+
+    // Agregar event listener para el botón Learn More
+    const learnMoreBtn = dialog.querySelector('.learn-more-button');
+    learnMoreBtn.addEventListener('click', () => {
+      closeDialog();
+      showDetailedDialog(game);
+    });
+
+    const closeBtn = dialog.querySelector('.close-dialog');
+    closeBtn.addEventListener('click', closeDialog);
+
+    overlay.addEventListener('click', closeDialog);
+
+    function closeDialog() {
+      video.pause();
+      video.removeAttribute('src');
+      document.body.removeChild(dialog);
+      document.body.removeChild(overlay);
+    }
+
+    // USE ESC
+    document.addEventListener('keydown', function escClose(e) {
+      if (e.key === 'Escape') {
+        closeDialog();
+        document.removeEventListener('keydown', escClose);
+      }
+    });
+  }
+
+  // SHOW THE SECOND DIALOG
+  function showDetailedDialog(game) {
+    const overlay = document.createElement('div');
+    overlay.className = 'dialog-overlay';
+    document.body.appendChild(overlay);
+
+    const dialog = document.createElement('div');
+    dialog.className = 'game-dialog detailed-dialog';
+
+    // DUPLICATE THE Video background
+    const videoContainer = document.createElement('div');
+    videoContainer.className = 'video-container';
+
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.src = game.backgroundVideo;
+    video.className = 'bg-video';
+
+    videoContainer.appendChild(video);
+    dialog.appendChild(videoContainer);
+
+    const content = document.createElement('div');
+    content.className = 'dialog-content detailed-content';
+
+    // Funtion to verify if the game is in the GOTY list, line 35
+    const gotyInfo = gotyGames[game.title] ? 
+      `<p><strong class="goty">GOTY Winner:</strong> ${gotyGames[game.title]}</p>` : 
+      '';
+
+    content.innerHTML = `
+            <h2>${game.title}</h2>
+            <div class="detailed-game-info">
+                <p><strong>Developer:</strong> ${game.developer}</p>
+                <p><strong>Release Year:</strong> ${game.year}</p>
+                <p><strong>Rating:</strong> ${game.rating}</p>
+                <p><strong>Genre:</strong> ${game.genre}</p>
+                <p><strong>Summary:</strong> ${game.h_sumary}</p>
+                <p><strong>Multiplayer:</strong> ${game.multiplayer}</p>
+                <p><strong>Play Time:</strong> ${game.playtime}</p>
+                <p><strong>Metacritic Score:</strong> ${game.score}/100</p>
+                ${gotyInfo}
+                <div class="button-container">
+                    <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+                </div>
             </div>
             <button class="close-dialog">✕ Close</button>
         `;
@@ -81,8 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeDialog() {
       video.pause();
       video.removeAttribute('src');
-
-      
       document.body.removeChild(dialog);
       document.body.removeChild(overlay);
     }

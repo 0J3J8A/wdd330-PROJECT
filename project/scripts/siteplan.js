@@ -79,10 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // -------------------- GAME DIALOG FUNCTION --------------------
   function showGameDialog(game) {
-    
     const overlay = document.createElement('div');
     overlay.className = 'dialog-overlay';
-
 
     const dialog = document.createElement('div');
     dialog.className = 'game-dialog';
@@ -101,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
     videoContainer.appendChild(video);
     dialog.appendChild(videoContainer);
 
-    
     const content = document.createElement('div');
     content.className = 'dialog-content';
     content.innerHTML = `
@@ -110,21 +107,109 @@ document.addEventListener('DOMContentLoaded', function () {
         <p><strong>Developer:</strong> ${game.developer}</p>
         <p><strong>Release Year:</strong> ${game.year}</p>
         <p><strong>Rating:</strong> ${game.rating}</p>
-        <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+        <div class="button-container">
+          <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+          <button class="learn-more-button">Learn More</button>
+        </div>
       </div>
     `;
- 
+
     const closeBtn = document.createElement('button');
     closeBtn.className = 'close-dialog';
     closeBtn.innerText = '✕ Close';
     closeBtn.addEventListener('click', closeDialog);
 
+    // Agregar event listener para el botón Learn More
+    const learnMoreBtn = content.querySelector('.learn-more-button');
+    learnMoreBtn.addEventListener('click', () => {
+      closeDialog();
+      showDetailedDialog(game);
+    });
 
     dialog.appendChild(content);
     dialog.appendChild(closeBtn);
     overlay.appendChild(dialog);
     document.body.appendChild(overlay);
 
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) {
+        closeDialog();
+      }
+    });
+
+    // USE ESC
+    function escClose(e) {
+      if (e.key === 'Escape') {
+        closeDialog();
+        document.removeEventListener('keydown', escClose);
+      }
+    }
+    document.addEventListener('keydown', escClose);
+
+    function closeDialog() {
+      video.pause();
+      video.removeAttribute('src');
+      overlay.remove();
+    }
+  }
+
+  // -------------------- SHOW THE SECOND DIALOG --------------------
+  function showDetailedDialog(game) {
+    const overlay = document.createElement('div');
+    overlay.className = 'dialog-overlay';
+
+    const dialog = document.createElement('div');
+    dialog.className = 'game-dialog detailed-dialog';
+
+    // Duplicate the Video background
+    const videoContainer = document.createElement('div');
+    videoContainer.className = 'video-container';
+
+    const video = document.createElement('video');
+    video.className = 'bg-video';
+    video.src = game.backgroundVideo;
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+
+    videoContainer.appendChild(video);
+    dialog.appendChild(videoContainer);
+
+    const content = document.createElement('div');
+    content.className = 'dialog-content detailed-content';
+
+    // Verificar si el juego tiene campo GOTY en el JSON
+    const gotyInfo = game.GOTY ? 
+      `<p><strong class="goty">GOTY Winner:</strong> ${game.GOTY}</p>` : 
+      '';
+
+    content.innerHTML = `
+      <h2>${game.title}</h2>
+      <div class="detailed-game-info">
+        <p><strong>Developer:</strong> ${game.developer}</p>
+        <p><strong>Release Year:</strong> ${game.year}</p>
+        <p><strong>Rating:</strong> ${game.rating}</p>
+        <p><strong>Genre:</strong> ${game.genre}</p>
+        <p><strong>Summary:</strong> ${game.h_sumary}</p>
+        <p><strong>Multiplayer:</strong> ${game.multiplayer}</p>
+        <p><strong>Play Time:</strong> ${game.playtime}</p>
+        <p><strong>Metacritic Score:</strong> ${game.score}/100</p>
+        ${gotyInfo}
+        <div class="button-container">
+          <a href="${game.amazonLink}" target="_blank" class="buy-button">Buy on Amazon</a>
+        </div>
+      </div>
+    `;
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'close-dialog';
+    closeBtn.innerText = '✕ Close';
+    closeBtn.addEventListener('click', closeDialog);
+
+    dialog.appendChild(content);
+    dialog.appendChild(closeBtn);
+    overlay.appendChild(dialog);
+    document.body.appendChild(overlay);
 
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) {
