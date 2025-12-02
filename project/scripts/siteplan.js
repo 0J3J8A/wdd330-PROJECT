@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.innerText = '✕ Close';
     closeBtn.addEventListener('click', closeDialog);
 
-    // Agregar event listener para el botón Learn More
+    // Event listener for the Learn More button
     const learnMoreBtn = content.querySelector('.learn-more-button');
     learnMoreBtn.addEventListener('click', () => {
       closeDialog();
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const content = document.createElement('div');
     content.className = 'dialog-content detailed-content';
 
-    // Verificar si el juego tiene campo GOTY en el JSON
+    // Funtion to verify if the game is in the GOTY list
     const gotyInfo = game.GOTY ? 
       `<p><strong class="goty">GOTY Winner:</strong> ${game.GOTY}</p>` : 
       '';

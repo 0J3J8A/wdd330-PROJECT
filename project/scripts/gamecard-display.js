@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('menu-open');
     });
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     // GET THE DATA OF THE FORM
@@ -85,8 +86,67 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.gamer-card').prepend(badge);
     }
 
+    // Funtion to DOWNLOAD the card as an image
     function downloadCard() {
-        alert('Card download functionality would be implemented here with html2canvas library');
+        const cardElement = document.querySelector('.gamer-card');
         
+        // SHOWING A TEXT indicating the process
+        const downloadBtn = document.getElementById('downloadCard');
+        const originalText = downloadBtn.textContent;
+        downloadBtn.textContent = 'Processing...';
+        downloadBtn.disabled = true;
+        
+        // Waiting to charge the iamges completely
+        function waitForImages() {
+            const images = document.querySelectorAll('img');
+            const promises = Array.from(images).map(img => {
+                if (img.complete) return Promise.resolve();
+                return new Promise(resolve => {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+            });
+            return Promise.all(promises);
+        }
+        
+        waitForImages().then(() => {
+            // use the html2canvas  library
+            return html2canvas(cardElement, {
+                scale: 2, // Quality 2x
+                useCORS: true, 
+                allowTaint: false, 
+                backgroundColor: null, // NO background
+                logging: false 
+            });
+        }).then(canvas => {
+            const link = document.createElement('a');
+            
+            // Create the name of the file, using the Name of the form
+            const fileName = `GamerCard_${cardData.firstName}_${cardData.character}.png`;
+            
+            link.download = fileName;
+            link.href = canvas.toDataURL('image/png');
+            
+            // Using the click statement
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            downloadBtn.textContent = originalText;
+            downloadBtn.disabled = false;
+            
+            // Showing a success message
+            alert('Card downloaded successfully!');
+            
+        }).catch(error => {
+            console.error('Error generating card:', error);
+            
+            // Restart button
+            downloadBtn.textContent = 'Download Card';
+            downloadBtn.disabled = false;
+            
+            // Just in case, an error msg
+            alert('Error downloading card. Please try again.');
+        });
     }
 });

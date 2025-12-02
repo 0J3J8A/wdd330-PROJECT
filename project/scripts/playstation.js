@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dialog.appendChild(content);
         document.body.appendChild(dialog);
 
-        // Agregar event listener para el botón Learn More
+        // Event listener for the Learn More button
         const learnMoreBtn = dialog.querySelector('.learn-more-button');
         learnMoreBtn.addEventListener('click', () => {
             closeDialog();
