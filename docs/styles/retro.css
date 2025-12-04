@@ -1,0 +1,31 @@
+/*USING THE COLOR SCHEMA AND TYPOGRAHY*/
+:root {
+  /* BACKGROUND */
+  --color-BLACK: rgb(0, 0, 0);
+
+  /* Nintendo Switch (RED) */
+  --color-switch: rgb(255, 45, 45);
+  --color-switch-dark: rgb(200, 30, 30);
+
+  /* PlayStation (BLUE) */
+  --color-playstation: rgb(0, 120, 255);
+  --color-playstation-dark: rgb(15, 65, 140);
+
+  /* Xbox (NEON-GREEN) */
+  --color-xbox: rgb(0, 255, 100);
+  --color-xbox-dark: rgb(0, 150, 70);
+
+  /* TEXT*/
+  --color-text: rgb(255, 255, 255);
+  --color-text-secondary: rgb(180, 180, 180);
+
+  /* TEXT-PURPLE*/
+  --color-purple: rgb(120, 60, 255);
+  --color-purple-dark: rgb(100, 30, 200);
+
+  /*FONTS */
+  --font-body: 'Rajdhani', sans-serif;
+  --font-title: 'Orbitron', sans-serif;
+
+  /* https://coolors.co/000000-ff2d2d-0078ff-00ff64-ffffff-783cff */
+}

@@ -66,6 +66,7 @@ header h1 {
 }
 
 #HOME,
+#RETRO,
 #SWITCH,
 #PS,
 #XBOX {
@@ -77,6 +78,10 @@ header h1 {
 }
 
 #HOME:hover {
+  color: var(--color-purple);
+}
+
+#RETRO:HOVER{
   color: var(--color-purple);
 }
 
