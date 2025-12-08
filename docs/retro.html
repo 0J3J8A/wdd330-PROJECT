@@ -66,12 +66,29 @@
         <nav id="MAIN_MENU">
             <a id="h_menu" href="#"></a>
             <a href="siteplan.html" id="HOME">HOME</a>
-            <a href="retro.html" id="RETRO">RETRO</a>
+            <a href="retro.html" id="RETRO">GAMES</a>
             <a href="switch.html" id="SWITCH">SWITCH</a>
             <a href="playstation.html" id="PS">PLAY STATION</a>
             <a href="xbox.html" id="XBOX">XBOX</a>
         </nav>
     </header>
+    <main>
+        <section id="giveaways-section">
+            <h2>Play What You Like Most</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="pc">PC</button>
+                <button class="filter-btn" data-filter="steam">Steam</button>
+                <button class="filter-btn" data-filter="epic">Epic Games</button>
+                <button class="filter-btn" data-filter="ps5">PlayStation</button>
+                <button class="filter-btn" data-filter="xbox">Xbox Series X/S</button>
+                <button class="filter-btn" data-filter="switch">Nintendo Switch</button>
+            </div>
+            <div id="loading">Loading games...</div>
+            <div id="giveaways-container" class="games-grid"></div>
+            <div id="error-message" class="error"></div>
+        </section>
+    </main>
     <footer>
         <p>©<span id="currentyear"></span>- Juan Jose Aguirre Marin - Colombia</p>
         <p class="p_2">Last Modification: <span id="lastmodification"></span></p>

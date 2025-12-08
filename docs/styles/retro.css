@@ -29,3 +29,374 @@
 
   /* https://coolors.co/000000-ff2d2d-0078ff-00ff64-ffffff-783cff */
 }
+
+/* GIVEAWAYS SECTION */
+#giveaways-section {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 2rem;
+  box-shadow: 0 0 20px var(--color-purple);
+}
+
+#giveaways-section h2 {
+  font-family: var(--font-title);
+  color: var(--color-text);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--color-purple);
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-purple-dark);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  background-color: var(--color-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--color-purple);
+}
+
+.filter-btn.active {
+  background-color: var(--color-purple);
+  box-shadow: 0 0 15px var(--color-purple);
+}
+
+/* GAMES GRID */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+  /* Makes all cards the same height */
+}
+
+/* GAME CARD STYLING - FIXED HEIGHT CARDS */
+.game-card {
+  background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(0, 0, 0, 0.9));
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-purple-dark);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Makes all cards the same height in the grid */
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(120, 60, 255, 0.3);
+  border-color: var(--color-purple);
+}
+
+.game-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--color-purple);
+  flex-shrink: 0;
+  /* Prevents image from shrinking */
+}
+
+.game-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* Takes available space */
+  min-height: 350px;
+  /* Minimum content height */
+}
+
+.game-title {
+  font-family: var(--font-title);
+  color: var(--color-text);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  min-height: 3.2rem;
+  /* Fixed height for title (2 lines) */
+  overflow: hidden;
+}
+
+.game-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+  /* Fixed height for platforms */
+}
+
+.platform-tag {
+  background-color: var(--color-purple-dark);
+  color: var(--color-text);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  height: fit-content;
+}
+
+.game-type {
+  display: inline-block;
+  background-color: var(--color-switch-dark);
+  color: var(--color-text);
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.game-type.game {
+  background-color: var(--color-switch-dark);
+}
+
+.game-type.loot {
+  background-color: var(--color-playstation-dark);
+}
+
+.game-type.beta {
+  background-color: var(--color-xbox-dark);
+}
+
+.game-description {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  /* Takes available space */
+  min-height: 4.5rem;
+  /* Fixed height for description (3 lines) */
+  overflow: hidden;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  min-height: 1.5rem;
+  /* Fixed height for info */
+}
+
+/* PLAY BUTTON - Always at bottom */
+.play-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: var(--color-purple-dark);
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  align-items: center;
+  margin-top: auto;
+  /* Pushes button to bottom */
+}
+
+.play-btn:hover {
+  color: var(--color-text);
+  transform: translateY(-3px);
+}
+
+/* Source attribution - always below button */
+.game-content>p:last-child {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+  text-align: center;
+  min-height: 1rem;
+}
+
+/* LOADING & ERROR */
+#loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+
+.error {
+  color: var(--color-switch);
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+/* FILTER BTN*/
+.filter-btn[data-filter="pc"] {
+  background-color: var(--color-purple-dark);
+}
+
+.filter-btn[data-filter="steam"] {
+  background-color: var(--color-purple-dark);
+}
+
+.filter-btn[data-filter="epic"] {
+  background-color: var(--color-purple-dark);
+}
+
+.filter-btn[data-filter="ps5"] {
+  background-color: var(--color-playstation-dark);
+}
+
+.filter-btn[data-filter="xbox"] {
+  background-color: var(--color-xbox-dark);
+}
+
+.filter-btn[data-filter="switch"] {
+  background-color: var(--color-switch-dark);
+}
+
+.filter-btn[data-filter="pc"]:hover,
+.filter-btn[data-filter="pc"].active {
+  background-color: var(--color-purple);
+}
+
+.filter-btn[data-filter="steam"]:hover,
+.filter-btn[data-filter="steam"].active {
+  background-color: var(--color-purple);
+}
+
+.filter-btn[data-filter="epic"]:hover,
+.filter-btn[data-filter="epic"].active {
+  background-color: var(--color-purple);
+}
+
+.filter-btn[data-filter="ps5"]:hover,
+.filter-btn[data-filter="ps5"].active {
+  background-color: var(--color-playstation);
+}
+
+.filter-btn[data-filter="xbox"]:hover,
+.filter-btn[data-filter="xbox"].active {
+  background-color: var(--color-xbox);
+}
+
+.filter-btn[data-filter="switch"]:hover,
+.filter-btn[data-filter="switch"].active {
+  background-color: var(--color-switch);
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+#loading {
+  animation: pulse 1.5s infinite;
+  color: var(--color-purple);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #giveaways-section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  #giveaways-section h2 {
+    font-size: 2rem;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .filters {
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .game-content {
+    padding: 1.2rem;
+    min-height: 320px;
+  }
+
+  .game-title {
+    font-size: 1.1rem;
+    min-height: 2.8rem;
+  }
+
+  .game-description {
+    font-size: 0.85rem;
+    min-height: 4rem;
+  }
+
+  .play-btn {
+    padding: 10px;
+    font-size: 1.5rem;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .game-content {
+    min-height: 300px;
+  }
+
+  .game-title {
+    font-size: 1rem;
+    min-height: 2.6rem;
+  }
+}
