@@ -275,3 +275,235 @@ document.addEventListener('DOMContentLoaded', function () {
   // Auto-refresh each 10 min
   setInterval(() => fetchGiveaways(currentFilter), 10 * 60 * 1000);
 });
+
+// -------------------- SIDEBAR APIS --------------------
+document.addEventListener('DOMContentLoaded', function () {
+    // Elements
+    const hackerToggle = document.getElementById('hacker-news-toggle');
+    const jokesToggle = document.getElementById('jokes-toggle');
+    const hackerPanel = document.getElementById('hacker-news-panel');
+    const jokesPanel = document.getElementById('jokes-panel');
+    const closeButtons = document.querySelectorAll('.close-panel');
+    let activePanel = null;
+
+    // Toggle panels
+    hackerToggle.addEventListener('click', () => togglePanel(hackerPanel));
+    jokesToggle.addEventListener('click', () => togglePanel(jokesPanel));
+
+    // Close panels
+    closeButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeAllPanels();
+        });
+    });
+
+    // Close panels when clicking outside
+    document.addEventListener('click', (e) => {
+        if (activePanel && !activePanel.contains(e.target) && 
+            !hackerToggle.contains(e.target) && !jokesToggle.contains(e.target)) {
+            closeAllPanels();
+        }
+    });
+
+    function togglePanel(panel) {
+        if (panel.classList.contains('active')) {
+            panel.classList.remove('active');
+            activePanel = null;
+        } else {
+            closeAllPanels();
+            panel.classList.add('active');
+            activePanel = panel;
+            
+            // Load data when panel opens
+            if (panel === hackerPanel) {
+                loadHackerNews('top');
+            } else if (panel === jokesPanel) {
+                loadRandomJoke('Any');
+            }
+        }
+    }
+
+    function closeAllPanels() {
+        hackerPanel.classList.remove('active');
+        jokesPanel.classList.remove('active');
+        activePanel = null;
+    }
+
+    // -------------------- HACKER NEWS API --------------------
+    const hackerContent = document.getElementById('hacker-news-content');
+    const hackerLoading = document.getElementById('hacker-news-loading');
+    const hackerError = document.getElementById('hacker-news-error');
+    const hackerFilterBtns = document.querySelectorAll('#hacker-news-panel .api-filter-btn');
+
+    // Hacker News API URLs
+    const HN_API = {
+        top: 'https://hacker-news.firebaseio.com/v0/topstories.json',
+        new: 'https://hacker-news.firebaseio.com/v0/newstories.json',
+        best: 'https://hacker-news.firebaseio.com/v0/beststories.json',
+        ask: 'https://hacker-news.firebaseio.com/v0/askstories.json'
+    };
+
+    async function loadHackerNews(type = 'top') {
+        try {
+            hackerLoading.style.display = 'block';
+            hackerContent.innerHTML = '';
+            hackerError.textContent = '';
+
+            // Update active filter button
+            hackerFilterBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.type === type);
+            });
+
+            // Fetch story IDs
+            const response = await fetch(HN_API[type]);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            const storyIds = await response.json();
+            const topStories = storyIds.slice(0, 10); // Get top 10 stories
+
+            // Fetch story details
+            const stories = await Promise.all(
+                topStories.map(id => 
+                    fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+                        .then(res => res.json())
+                )
+            );
+
+            displayHackerNews(stories);
+
+        } catch (error) {
+            console.error('Error loading Hacker News:', error);
+            hackerError.textContent = 'Error loading news. Please try again later.';
+        } finally {
+            hackerLoading.style.display = 'none';
+        }
+    }
+
+    function displayHackerNews(stories) {
+        hackerContent.innerHTML = stories.map(story => `
+            <div class="hn-story" data-id="${story.id}">
+                <div class="hn-story-title">
+                    ${story.url ? 
+                        `<a href="${story.url}" target="_blank" rel="noopener noreferrer">${story.title}</a>` : 
+                        story.title
+                    }
+                </div>
+                <div class="hn-story-meta">
+                    <span class="hn-story-points">▲ ${story.score || 0} points</span>
+                    <span class="hn-story-comments">💬 ${story.descendants || 0} comments</span>
+                    <span class="hn-story-author">👤 ${story.by || 'unknown'}</span>
+                </div>
+                ${story.url ? `<div class="hn-story-url">${new URL(story.url).hostname}</div>` : ''}
+            </div>
+        `).join('');
+    }
+
+    // Filter button events for Hacker News
+    hackerFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            loadHackerNews(btn.dataset.type);
+        });
+    });
+
+    // -------------------- JOKES API --------------------
+    const jokesContent = document.getElementById('jokes-content');
+    const jokesLoading = document.getElementById('jokes-loading');
+    const jokesError = document.getElementById('jokes-error');
+    const jokesFilterBtns = document.querySelectorAll('#jokes-panel .api-filter-btn');
+    const newJokeBtn = document.getElementById('new-joke-btn');
+    const safeModeCheckbox = document.getElementById('safe-mode');
+
+    async function loadRandomJoke(category = 'Any') {
+        try {
+            jokesLoading.style.display = 'block';
+            jokesContent.innerHTML = '';
+            jokesError.textContent = '';
+
+            // Update active filter button
+            jokesFilterBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.category === category);
+            });
+
+            // Build API URL
+            const safeMode = safeModeCheckbox.checked;
+            let apiUrl = `https://v2.jokeapi.dev/joke/${category}?type=twopart`;
+            
+            if (safeMode) {
+                apiUrl += '&safe-mode';
+            }
+
+            // Add language preference (English)
+            apiUrl += '&lang=en';
+
+            // Fetch joke
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            const jokeData = await response.json();
+
+            if (jokeData.error) {
+                throw new Error(jokeData.message);
+            }
+
+            displayJoke(jokeData);
+
+        } catch (error) {
+            console.error('Error loading joke:', error);
+            jokesError.textContent = 'Error loading joke. Please try again.';
+        } finally {
+            jokesLoading.style.display = 'none';
+        }
+    }
+
+    function displayJoke(joke) {
+        let jokeHtml = '';
+        
+        if (joke.type === 'twopart') {
+            jokeHtml = `
+                <div class="joke-container">
+                    <div class="joke-setup">${joke.setup}</div>
+                    <div class="joke-delivery">${joke.delivery}</div>
+                    <div class="joke-meta">
+                        <span class="joke-category">${joke.category}</span>
+                        <span class="joke-type">Two-part</span>
+                        <span class="joke-language">${joke.lang.toUpperCase()}</span>
+                    </div>
+                </div>
+            `;
+        } else {
+            jokeHtml = `
+                <div class="joke-container">
+                    <div class="joke-single">${joke.joke}</div>
+                    <div class="joke-meta">
+                        <span class="joke-category">${joke.category}</span>
+                        <span class="joke-type">Single</span>
+                        <span class="joke-language">${joke.lang.toUpperCase()}</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        jokesContent.innerHTML = jokeHtml;
+    }
+
+    // Event listeners for Jokes
+    jokesFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            loadRandomJoke(btn.dataset.category);
+        });
+    });
+
+    newJokeBtn.addEventListener('click', () => {
+        const activeCategory = document.querySelector('#jokes-panel .api-filter-btn.active').dataset.category;
+        loadRandomJoke(activeCategory);
+    });
+
+    safeModeCheckbox.addEventListener('change', () => {
+        const activeCategory = document.querySelector('#jokes-panel .api-filter-btn.active').dataset.category;
+        loadRandomJoke(activeCategory);
+    });
+
+    // Initialize jokes with default category
+    loadRandomJoke('Any');
+});

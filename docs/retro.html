@@ -80,7 +80,7 @@
                 <button class="filter-btn" data-filter="pc">PC</button>
                 <button class="filter-btn" data-filter="steam">Steam</button>
                 <button class="filter-btn" data-filter="epic">Epic Games</button>
-                <button class="filter-btn" data-filter="ps5">PlayStation</button>
+                <button class="filter-btn" data-filter="ps5">Play Station</button>
                 <button class="filter-btn" data-filter="xbox">Xbox Series X/S</button>
                 <button class="filter-btn" data-filter="switch">Nintendo Switch</button>
             </div>
@@ -88,6 +88,65 @@
             <div id="giveaways-container" class="games-grid"></div>
             <div id="error-message" class="error"></div>
         </section>
+        <!-- SIDEBAR APIS -->
+        <div id="api-sidebar">
+            <!-- Hacker News Toggle -->
+            <button id="hacker-news-toggle" class="api-toggle">
+                <span>H</span>
+                <span class="toggle-label">Hacker News</span>
+            </button>
+
+            <!-- Jokes Toggle -->
+            <button id="jokes-toggle" class="api-toggle">
+                <span>J</span>
+                <span class="toggle-label">Jokes API</span>
+            </button>
+
+            <!-- Hacker News Panel -->
+            <div id="hacker-news-panel" class="api-panel">
+                <div class="api-panel-header">
+                    <h3>Hacker News</h3>
+                    <button class="close-panel">&times;</button>
+                </div>
+                <div class="api-panel-content">
+                    <div class="api-filters">
+                        <button class="api-filter-btn active" data-type="top">Top Stories</button>
+                        <button class="api-filter-btn" data-type="new">New Stories</button>
+                        <button class="api-filter-btn" data-type="best">Best Stories</button>
+                        <button class="api-filter-btn" data-type="ask">Ask HN</button>
+                    </div>
+                    <div id="hacker-news-loading" class="api-loading">Loading Hacker News...</div>
+                    <div id="hacker-news-content" class="api-content"></div>
+                    <div id="hacker-news-error" class="api-error"></div>
+                </div>
+            </div>
+
+            <!-- Jokes Panel -->
+            <div id="jokes-panel" class="api-panel">
+                <div class="api-panel-header">
+                    <h3>Random Jokes</h3>
+                    <button class="close-panel">&times;</button>
+                </div>
+                <div class="api-panel-content">
+                    <div class="api-filters">
+                        <button class="api-filter-btn active" data-category="Any">Any</button>
+                        <button class="api-filter-btn" data-category="Programming">Programming</button>
+                        <button class="api-filter-btn" data-category="Misc">Misc</button>
+                        <button class="api-filter-btn" data-category="Pun">Pun</button>
+                        <button class="api-filter-btn" data-category="Spooky">Spooky</button>
+                    </div>
+                    <div class="jokes-controls">
+                        <button id="new-joke-btn" class="new-joke-btn">Get New Joke</button>
+                        <label class="safe-mode">
+                            <input type="checkbox" id="safe-mode" checked> Safe Mode
+                        </label>
+                    </div>
+                    <div id="jokes-loading" class="api-loading">Loading joke...</div>
+                    <div id="jokes-content" class="api-content"></div>
+                    <div id="jokes-error" class="api-error"></div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>©<span id="currentyear"></span>- Juan Jose Aguirre Marin - Colombia</p>

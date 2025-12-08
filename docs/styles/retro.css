@@ -338,6 +338,363 @@
   font-size: 1.2rem;
 }
 
+/* API SIDEBAR */
+#api-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--color-purple-dark);
+    box-shadow: 0 0 15px rgba(120, 60, 255, 0.3);
+}
+
+.api-toggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--color-purple-dark), var(--color-purple));
+    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.api-toggle:hover {
+    width: 180px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, var(--color-purple), var(--color-purple-dark));
+    box-shadow: 0 0 15px var(--color-purple);
+}
+
+.api-toggle:hover .toggle-label {
+    opacity: 1;
+    transform: translateX(0);
+    width: auto;
+    margin-left: 10px;
+}
+
+.toggle-label {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+    white-space: nowrap;
+}
+
+/* API PANELS */
+.api-panel {
+    position: fixed;
+    left: -400px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px;
+    height: 80vh;
+    max-height: 600px;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.95), rgba(0, 0, 0, 0.95));
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--color-purple);
+    box-shadow: 0 0 30px rgba(120, 60, 255, 0.5);
+    z-index: 1001;
+    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.api-panel.active {
+    left: 0;
+}
+
+.api-panel-header {
+    padding: 1rem;
+    background: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-purple);
+}
+
+.api-panel-header h3 {
+    font-family: var(--font-title);
+    color: var(--color-text);
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px var(--color-purple);
+}
+
+.close-panel {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-panel:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.api-panel-content {
+    padding: 1rem;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* API FILTERS */
+.api-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(120, 60, 255, 0.3);
+}
+
+.api-filter-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--color-purple-dark);
+    background: rgba(120, 60, 255, 0.1);
+    color: var(--color-text-secondary);
+    border-radius: 15px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.api-filter-btn:hover {
+    background: rgba(120, 60, 255, 0.2);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+.api-filter-btn.active {
+    background: var(--color-purple);
+    color: var(--color-text);
+    border-color: var(--color-purple);
+    box-shadow: 0 0 10px rgba(120, 60, 255, 0.5);
+}
+
+/* JOKES CONTROLS */
+.jokes-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(120, 60, 255, 0.3);
+}
+
+.new-joke-btn {
+    padding: 8px 16px;
+    background: linear-gradient(45deg, var(--color-purple-dark), var(--color-purple));
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-joke-btn:hover {
+    background: linear-gradient(45deg, var(--color-purple), var(--color-purple-dark));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(120, 60, 255, 0.3);
+}
+
+.safe-mode {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.safe-mode input {
+    accent-color: var(--color-purple);
+}
+
+/* API CONTENT */
+.api-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.api-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-purple);
+    font-family: var(--font-title);
+    animation: pulse 1.5s infinite;
+}
+
+.api-error {
+    color: var(--color-switch);
+    text-align: center;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+}
+
+/* HACKER NEWS STORIES */
+.hn-story {
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--color-purple);
+    transition: all 0.3s ease;
+}
+
+.hn-story:hover {
+    background: rgba(60, 60, 60, 0.7);
+    transform: translateX(5px);
+}
+
+.hn-story-title {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.hn-story-title a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hn-story-title a:hover {
+    color: var(--color-purple);
+}
+
+.hn-story-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hn-story-points, .hn-story-comments, .hn-story-author {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hn-story-url {
+    font-size: 0.8rem;
+    color: var(--color-purple);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* JOKES CONTENT */
+.joke-container {
+    background: rgba(40, 40, 40, 0.5);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--color-purple);
+    text-align: center;
+}
+
+.joke-setup {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.joke-delivery {
+    color: var(--color-xbox);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.joke-single {
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.joke-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(120, 60, 255, 0.3);
+    color: var(--color-text-secondary);
+    font-size: 0.8rem;
+}
+
+.joke-category, .joke-type, .joke-language {
+    padding: 3px 10px;
+    background: rgba(120, 60, 255, 0.2);
+    border-radius: 15px;
+}
+
+/* SCROLLBAR STYLING */
+.api-panel-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.api-panel-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.api-panel-content::-webkit-scrollbar-thumb {
+    background: var(--color-purple-dark);
+    border-radius: 3px;
+}
+
+.api-panel-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-purple);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   #giveaways-section {
